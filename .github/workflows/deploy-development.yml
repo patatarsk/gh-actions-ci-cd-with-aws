@@ -10,6 +10,11 @@ env:
   ECS_CLUSTER: GhDevCluster
   ECS_TASK_DEFINITION: task-definition-dev.json
   CONTAINER_NAME: gh-action-ci-cd
+
+
+permissions:
+  contents: read
+
 jobs:
   integrate:
     name: Integrate
@@ -31,7 +36,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     environment: development
-
+    needs: integrate
     steps:
     - name: Checkout
       uses: actions/checkout@v3
