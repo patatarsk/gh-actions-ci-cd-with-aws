@@ -1,0 +1,54 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-1:825527585977:task-definition/GhProdTask:1",
+    "containerDefinitions": [
+        {
+            "name": "gh-action-ci-cd",
+            "image": "825527585977.dkr.ecr.eu-west-1.amazonaws.com/gh-action-ci-cd",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "gh-action-ci-cd-3000-tcp",
+                    "containerPort": 3000,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "GhProdTask",
+    "executionRoleArn": "arn:aws:iam::825527585977:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "450",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-03-24T13:09:10.432Z",
+    "registeredBy": "arn:aws:iam::825527585977:root",
+    "tags": []
+}
