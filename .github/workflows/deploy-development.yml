@@ -4,7 +4,7 @@ on:
     branches:
       - dev
 env:
-  AWS_REGION: us-east-1
+  AWS_REGION: eu-west-1
   ECR_REPOSITORY: gh-action-ci-cd
   ECS_SERVICE: GhDevService
   ECS_CLUSTER: GhDevCluster
