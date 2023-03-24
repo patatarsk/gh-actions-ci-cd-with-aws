@@ -2,8 +2,8 @@
     "taskDefinitionArn": "arn:aws:ecs:eu-west-1:825527585977:task-definition/GhDevTask:1",
     "containerDefinitions": [
         {
-            "name": "gh-action-ci-cd-dev",
-            "image": "825527585977.dkr.ecr.eu-west-1.amazonaws.com/gh-action-ci-cd-dev",
+            "name": "gh-action-ci-cd",
+            "image": "825527585977.dkr.ecr.eu-west-1.amazonaws.com/gh-action-ci-cd",
             "cpu": 0,
             "portMappings": [
                 {
